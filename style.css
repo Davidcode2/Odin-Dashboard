@@ -24,6 +24,10 @@ h4 {
 	margin: 0;
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 .grid-wrapper {
 	display: grid;
 	grid-template-columns: 0.6fr [last-col-start] 4fr;
@@ -125,6 +129,10 @@ li {
 
 }
 
+.searchBar:hover {
+	background-color:tan;
+}
+
 .flex-function-header {
 	display: flex;
 	align-items: end;
@@ -161,6 +169,17 @@ li {
 	color: white;
 	margin-right: 1rem;
 }
+
+.flex-button-wrapper > button:hover {
+	background-color: lightcoral;
+}
+
+.flex-button-wrapper > button:active {
+	background-color: lightcoral;
+	position:relative;
+	top: 1px;
+}
+
 
 main {
 	grid-row: 2 / -1;
@@ -199,6 +218,18 @@ main > h2 {
 
 .main-text-card {
 	border-left: 6px solid khaki;
+}
+
+.main-text-card:hover {
+	transition: all 0.1s ease-in-out; 
+	transform: scale(1.01);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 61.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 110px 80px rgba(0, 0, 0, 0.12);
 }
 
 .card > h3 {
