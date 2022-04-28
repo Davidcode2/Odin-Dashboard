@@ -45,6 +45,7 @@ header {
 .sidebar {
 	grid-row: 1 / -1;
 	background-color: sandybrown;
+	min-width: 160px;
 	display: grid;
 	grid-template-rows: 10vh 30vh;
 	justify-items: start;
@@ -232,24 +233,28 @@ main > h2 {
 
 .grid-user {
 	display: grid;
-	grid-template-areas: "icon handle"
-											 "icon name";
+	grid-template: repeat(3, 1fr) / 1fr 2fr; 
 	margin-bottom: 10px;
+	row-gap: 20px;
 }
 
-.grid-user img {
-	grid-area: icon;
+.grid-user > img:first-child {
+	grid-column: 1;
 	margin-right: 10px;
 }
 
-.grid-user h4 {
-	grid-area: handle;
-	align-self: end;
-	padding: 0;
-	margin: 0;
+.grid-user > img:nth-child(4) {
+	grid-column: 1;
+	margin-right: 10px;
 }
+
+.grid-user > img {
+	grid-column: 1;
+	margin-right: 10px;
+}
+
 .grid-user p {
-	grid-area: name;
+	grid-column: 2;
 	align-self: start;
 	opacity: var(--card-text-opacity);
 }
